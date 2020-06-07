@@ -1,0 +1,8 @@
+{
+“name”: “Andy the Atenean Android”,
+“version”: “1.0.0”,
+“description”: “DSC Loyola Discord Bot for organisation”,
+“main”: “bot.js”,
+“author”: “Franz Taborlupa, ”,
+“dependencies”: {}
+}
