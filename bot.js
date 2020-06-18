@@ -8,7 +8,7 @@ const botClient = new Discord.Client();
 
 const TOKEN = token.env.TOKEN;
 
-const prefix = "#";
+const prefix = "=";
 var version = "1.0";
 
 var servers = {};
