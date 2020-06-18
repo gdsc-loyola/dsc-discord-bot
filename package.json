@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
   "author": "Franz Taborlupa",
-  "license": "ISC",
+  
   },
+"license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dsc-ateneo-de-manila-university/dsc-discord-bot.git"
