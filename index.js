@@ -3,7 +3,7 @@ const ytdl = require('ytdl-core');
 const cron = require('cron');
 require('dotenv').config();
 
-//const TOKEN = bot_token.env.TOKEN;
+const TOKEN = process.env.token;
 const botClient = new Discord.Client();
 
 const prefix = "!";
@@ -207,4 +207,4 @@ botClient.on('ready',() =>{
         
     });
 
-botClient.login(process.env.bot_token);
+botClient.login(TOKEN);
