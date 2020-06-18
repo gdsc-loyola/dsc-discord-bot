@@ -8,7 +8,7 @@ const botClient = new Discord.Client();
 
 const TOKEN = token.env.TOKEN;
 
-const prefix = "=";
+const prefix = "--";
 var version = "1.0";
 
 var servers = {};
@@ -48,7 +48,43 @@ botClient.on('ready',() =>{
     botClient.on('message', async message => {
 
         let args = message.content.substring(prefix.length).split(" ");
+          botClient.on('message', async message => {
+
+      
+            switch (args[0]){
+               
+                case 'help':
+                    const member = message.member.user.tag;
+                    const Embed = new Discord.MessageEmbed()
+                    .setColor("#31a5af")
+                        .setTitle('GENERAL')
+                        .addFields(
+                            { name: '!announcements', value: 'sends the current announcements of MISA' },
+                            { name: '!info', value: 'reveals something about me :)' },
+                            { name: '!basics', value: 'shows a list of discords functionalities' },
+                            { name: '!faqs', value: 'answers some questions in navigating our server' },
+                        )
+                        .setTimestamp();
+                    const Embed2 = new Discord.MessageEmbed()
+                        .setColor("#31a5af")
+                        .setTitle('PLAYING MUSIC')
+                        .addFields(
+                            { name: '!play <youtube link>', value: 'plays the audio of the selected video from youtube.' },
+                            { name: '!pause', value: 'pauses current track on queue.' },
+                            { name: '!skip', value: 'skips to the next song on queue.' },
+                            { name: '!stop', value: 'stops every song on queue.' },
+                            { name: '!queue', value: 'shows all track on queue' },
+                        )
+                        .setTimestamp();
+                    
+                    message.channel.send("Hi " + member + "! Check your DMs :)");
+                    message.author.send("Hi " + member + "! Here is the list of MISA Bot commands available!"); 
+                    message.author.send(Embed);
+                    message.author.send(Embed2);
+                break;
+          }
         
+    });
         if(message.channel.type == "dm"){
             return;
         }
