@@ -6,10 +6,10 @@ require('dotenv').config();
 
 const botClient = new Discord.Client();
 
-const TOKEN = process.env.TOKEN;
+
 
 const prefix = "!";
-var version = "2.0";
+var version = "1.0";
 
 var servers = {};
 
