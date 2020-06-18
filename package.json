@@ -4,7 +4,7 @@
   "description": "Development for Andy the Atenean Android the Discord bot for the use of DSC Loyola's server.",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
   "author": "Franz Taborlupa",
   "license": "ISC",
   },
