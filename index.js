@@ -3,10 +3,8 @@ const ytdl = require('ytdl-core');
 const cron = require('cron');
 require('dotenv').config();
 
-const TOKEN = process.env.TOKEN;
+const TOKEN = bot_token.env.TOKEN;
 const botClient = new Discord.Client();
-
-
 
 const prefix = "!";
 var version = "1.0";
