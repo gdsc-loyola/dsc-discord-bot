@@ -8,7 +8,7 @@ const botClient = new Discord.Client();
 
 const TOKEN = process.env.TOKEN;
 
-const prefix = "/";
+const prefix = "!";
 var version = "2.0";
 
 var servers = {};
