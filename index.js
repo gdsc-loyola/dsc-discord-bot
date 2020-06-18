@@ -206,4 +206,4 @@ botClient.on('ready',() =>{
         }
         
     });
-botClient.login(TOKEN);
+
