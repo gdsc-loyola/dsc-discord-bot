@@ -6,28 +6,28 @@ require('dotenv').config();
 
 const botClient = new Discord.Client();
 
-const TOKEN = token.env.TOKEN;
+const TOKEN = process.env.TOKEN;
 
-const prefix = "=";
-var version = "1.0";
+const prefix = "/";
+var version = "2.0";
 
 var servers = {};
 
 botClient.on('ready',() =>{
-    console.log('Andy the Android is ready!' + " version " + version);
+    console.log('MISA bot is ready!' + " version " + version);
 
     const morning = new cron.CronJob('0 30 4 * * 1-5', () => {
         var morningMessage = botClient.channels.cache.find(channel => channel.id === '713088552518418432');
         const morningEmbed = new Discord.MessageEmbed()
             .setColor('#31a5af')
-            .setTitle('Good Day Devs! Hope you have a great day!')
+            .setTitle('Good Day MISAns! Have a wonderful day ahead :)')
             .setTimestamp()
         morningMessage.send(morningEmbed);
       });
       
       morning.start();
 
-     const job = new cron.CronJob('0 0 12 * * 1,3,5', () => {
+    const job = new cron.CronJob('0 0 12 * * 1,3,5', () => {
         var announcement = botClient.channels.cache.find(channel => channel.id === '713088552518418432');
         const embed = new Discord.MessageEmbed()
             .setColor('#31a5af')
@@ -48,43 +48,7 @@ botClient.on('ready',() =>{
     botClient.on('message', async message => {
 
         let args = message.content.substring(prefix.length).split(" ");
-          botClient.on('message', async message => {
-
-      
-            switch (args[0]){
-               
-                case 'help':
-                    const member = message.member.user.tag;
-                    const Embed = new Discord.MessageEmbed()
-                    .setColor("#31a5af")
-                        .setTitle('GENERAL')
-                        .addFields(
-                            { name: '!announcements', value: 'sends the current announcements of MISA' },
-                            { name: '!info', value: 'reveals something about me :)' },
-                            { name: '!basics', value: 'shows a list of discords functionalities' },
-                            { name: '!faqs', value: 'answers some questions in navigating our server' },
-                        )
-                        .setTimestamp();
-                    const Embed2 = new Discord.MessageEmbed()
-                        .setColor("#31a5af")
-                        .setTitle('PLAYING MUSIC')
-                        .addFields(
-                            { name: '!play <youtube link>', value: 'plays the audio of the selected video from youtube.' },
-                            { name: '!pause', value: 'pauses current track on queue.' },
-                            { name: '!skip', value: 'skips to the next song on queue.' },
-                            { name: '!stop', value: 'stops every song on queue.' },
-                            { name: '!queue', value: 'shows all track on queue' },
-                        )
-                        .setTimestamp();
-                    
-                    message.channel.send("Hi " + member + "! Check your DMs :)");
-                    message.author.send("Hi " + member + "! Here is the list of MISA Bot commands available!"); 
-                    message.author.send(Embed);
-                    message.author.send(Embed2);
-                break;
-          }
         
-    });
         if(message.channel.type == "dm"){
             return;
         }
@@ -237,7 +201,7 @@ botClient.on('ready',() =>{
                     break;
 
                 case 'faqs':
-                    const member3 = message.member.user.tag;
+                    const member2 = message.member.user.tag;
                     const help2 = new Discord.MessageEmbed()
                         .setColor("#31a5af")
                         .setTitle('FAQS')
@@ -261,5 +225,4 @@ botClient.on('ready',() =>{
         }
         
     });
-
 botClient.login(TOKEN);
