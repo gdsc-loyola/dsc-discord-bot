@@ -207,4 +207,4 @@ botClient.on('ready',() =>{
         
     });
 
-//botClient.login(TOKEN);
+client.login(process.env.bot_token);
