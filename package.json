@@ -5,6 +5,8 @@
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "Franz Taborlupa",
+  "license": "ISC",
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,15 @@
   "homepage": "https://github.com/dsc-ateneo-de-manila-university/dsc-discord-bot#readme",
   "dependencies": {
     "cron": "^1.8.2",
+    "@discordjs/opus": "^0.3.2",
+    "cron": "^1.8.2",
     "discord.js": "^12.2.0",
-    "dotenv": "^8.2.0"
+    "discord.js-commando": "^0.10.0",
+    "dotenv": "^8.2.0",
+    "ffmpeg": "0.0.4",
+    "opusscript": "0.0.7",
+    "ytdl-core": "^2.1.4"
   }
 }
+
+ 
