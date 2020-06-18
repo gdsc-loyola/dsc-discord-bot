@@ -14,13 +14,13 @@ var version = "2.0";
 var servers = {};
 
 botClient.on('ready',() =>{
-    console.log('MISA bot is ready!' + " version " + version);
+    console.log('DSCL bot is ready!' + " version " + version);
 
     const morning = new cron.CronJob('0 30 4 * * 1-5', () => {
         var morningMessage = botClient.channels.cache.find(channel => channel.id === '713088552518418432');
         const morningEmbed = new Discord.MessageEmbed()
             .setColor('#31a5af')
-            .setTitle('Good Day MISAns! Have a wonderful day ahead :)')
+            .setTitle('Good Day Devs! Have a wonderful day ahead :)')
             .setTimestamp()
         morningMessage.send(morningEmbed);
       });
@@ -33,7 +33,7 @@ botClient.on('ready',() =>{
             .setColor('#31a5af')
             .setTitle('ANNOUNCEMENTS')
             .setAuthor("From: Executive Board")
-            .setDescription('1. Set trainings with your respective VPs! \n 2. No meeting this week!')
+            .setDescription('1. Set trainings with your respective Chiefs! \n 2. No meeting this week!')
             .setTimestamp()
         announcement.send(embed);
       });
@@ -41,7 +41,7 @@ botClient.on('ready',() =>{
       job.start();
 });
     botClient.on("guildMemberAdd", member => {
-        member.send("Welcome to Ateneo MISA 20-21 discord server! Type in !help to any channel in the server to get started :)")
+        member.send("Welcome to DSC Loyola 20-21 discord server! Type in !help to any channel in the server to get started!")
             .catch(console.error);
     });
 
