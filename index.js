@@ -201,7 +201,7 @@ botClient.on('ready',() =>{
                     break;
 
                 case 'faqs':
-                    const member2 = message.member.user.tag;
+                    const member3 = message.member.user.tag;
                     const help2 = new Discord.MessageEmbed()
                         .setColor("#31a5af")
                         .setTitle('FAQS')
@@ -212,8 +212,8 @@ botClient.on('ready',() =>{
                         )
                         .setTimestamp();
 
-                    message.channel.send("Hi " + member2 + "! Check your DMs :)");
-                    message.author.send("Hi " + member2 + "! Here some frequently asked questions in navigating our server:");
+                    message.channel.send("Hi " + member3 + "! Check your DMs :)");
+                    message.author.send("Hi " + member3 + "! Here some frequently asked questions in navigating our server:");
                     message.author.send(help2);
                 break;
 
