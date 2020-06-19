@@ -174,13 +174,30 @@ botClient.on('ready',() =>{
                         )
                         .setTimestamp();
                     
-                    message.channel.send("Hi " + member + "! Check your DMs :)");
-                    message.author.send("Hi " + member + "! Here is the list of MISA Bot commands available!"); 
+                    message.channel.send("Hi " + member + "! Check your DMs \(^o^)/");
+                    message.author.send("Hi " + member + "! Here is the list of my available commands!"); 
                     message.author.send(Embed);
                     message.author.send(Embed2);
                 break;
 
-              
+              case 'basics':
+                    const member2 = message.member.user.tag;
+                    const help = new Discord.MessageEmbed()
+                        .setColor("#31a5af")
+                        .setTitle('DISCORD BASICS')
+                        .addFields(
+                            { name: 'Join a voice channel', value: 'Press the voice channel where you want to connect and click connect' },
+                            { name: 'Leave a voice channel', value: 'Click disconnect button (red telephone icon w/ X)' },
+                            { name: 'Share screen during call', value: 'Once connected to a voice channel, press the video button (camera icon)' },
+                            { name: 'Add a friend', value: 'For Mobile: \n1. Press waving person icon below.\n2. Click on add friend icon on top.'
+                            },
+                        )
+                        .setTimestamp();
+                    
+                    message.channel.send("Hi " + member2 + "! Check your DMs :)");
+                    message.author.send("Hi " + member2 + "! Here are some instructions on how you can get started :)"); 
+                    message.author.send(help);
+                    break;
 
                 case 'faqs':
                     const member3 = message.member.user.tag;
