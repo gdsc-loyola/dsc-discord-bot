@@ -218,7 +218,7 @@ botClient.on('ready',() =>{
 
                 case 'info':
                     const member4 = message.member.user.tag;
-                    message.channel.send("Hi! I'm Andy the Atenean Android from DSC Loyola, version 1.0! Nice to meet you, Developer" + member4  + "\nType .help to get started.");
+                    message.channel.send("Hi! I'm Andy the Atenean Android from DSC Loyola, version 1.0! Nice to meet you, Developer " + member4  + "\nType .help to get started.");
                     
             }
         }
