@@ -107,7 +107,7 @@ botClient.on('ready',() =>{
                             server.queue.splice(i,1);
                         }
                         server.dispatcher.end();
-                        message.channel.send("Ended the queue! I will leave now :(")
+                        message.channel.send("Ended the queue! I will leave now :<")
                         console.log('stopped the queue');
                     }
                     else{
@@ -145,7 +145,7 @@ botClient.on('ready',() =>{
                     .setColor('#31a5af')
                     .setTitle('ANNOUNCEMENTS FOR TODAY')
                     .setAuthor("From: Executive Board")
-                    .setDescription('1. TRANSEM will happen next week (no definite date yet) \n 2. No meeting this week!')
+                    .setDescription('1. TRANSEM will happen next week. \n 2. Wrap-up meeting this week!')
                     .setTimestamp()
                     message.channel.send(embed);
                 break;
@@ -156,21 +156,21 @@ botClient.on('ready',() =>{
                     .setColor("#31a5af")
                         .setTitle('GENERAL')
                         .addFields(
-                            { name: '!announcements', value: 'sends the current announcements of MISA' },
-                            { name: '!info', value: 'reveals something about me :)' },
-                            { name: '!basics', value: 'shows a list of discords functionalities' },
-                            { name: '!faqs', value: 'answers some questions in navigating our server' },
+                            { name: '.announcements', value: 'sends the current announcements of DSC Loyola' },
+                            { name: '.info', value: 'reveals something about me :3' },
+                            { name: '.basics', value: 'shows a list of discords functionalities' },
+                            { name: '.faqs', value: 'answers some questions in navigating our server' },
                         )
                         .setTimestamp();
                     const Embed2 = new Discord.MessageEmbed()
                         .setColor("#31a5af")
                         .setTitle('PLAYING MUSIC')
                         .addFields(
-                            { name: '!play <youtube link>', value: 'plays the audio of the selected video from youtube.' },
-                            { name: '!pause', value: 'pauses current track on queue.' },
-                            { name: '!skip', value: 'skips to the next song on queue.' },
-                            { name: '!stop', value: 'stops every song on queue.' },
-                            { name: '!queue', value: 'shows all track on queue' },
+                            { name: '.play <youtube link>', value: 'plays the audio of the selected video from youtube.' },
+                            { name: '.pause', value: 'pauses current track on queue.' },
+                            { name: '.skip', value: 'skips to the next song on queue.' },
+                            { name: '.stop', value: 'stops every song on queue.' },
+                            { name: '.queue', value: 'shows all track on queue' },
                         )
                         .setTimestamp();
                     
@@ -207,7 +207,7 @@ botClient.on('ready',() =>{
                         .addFields(
                             { name: 'How do I ask for an IC?', value: 'Feel free to message any EB member directly!' },
                             { name: 'How do I raise a concern?', value: 'Message our helpdesk channel and I will notify EB members with your concern afterwards.' },
-                            { name: 'How do I use MISA Bot?', value: 'Type in !help to check what he can do :)' },
+                            { name: 'How do I interact with Andy?', value: 'Type in .help to check what he can do :)' },
                         )
                         .setTimestamp();
 
@@ -218,7 +218,7 @@ botClient.on('ready',() =>{
 
                 case 'info':
                     const member4 = message.member.user.tag;
-                    message.channel.send("Hello there " + member4 + "! I am MISA Bot version 1.0 :) \nType !help to get started.");
+                    message.channel.send("Hello there " + member4 + "! I am MISA Bot version 1.0 :) \nType .help to get started.");
                     
             }
         }
