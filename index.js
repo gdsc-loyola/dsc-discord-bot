@@ -3,16 +3,17 @@ const ytdl = require('ytdl-core');
 const cron = require('cron');
 require('dotenv').config();
 
-const TOKEN = process.env.token;
+const TOKEN = process.env.TOKEN;
 const botClient = new Discord.Client();
 
-const prefix = "!";
+const prefix = ".";
 var version = "1.0";
 
 var servers = {};
 
 botClient.on('ready',() =>{
-    console.log('DSCL bot is ready!' + " version " + version);
+    
+    console.log('Andy the Atenean Android is ready!' + " version " + version);
 
     const morning = new cron.CronJob('0 30 4 * * 1-5', () => {
         var morningMessage = botClient.channels.cache.find(channel => channel.id === '713088552518418432');
